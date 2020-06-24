@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ProductivityWatcher
+//  DeskClock
 //
 //  Created by Huy Tran on 8/27/19.
 //  Copyright © 2019 Huy Tran. All rights reserved.

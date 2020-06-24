@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="ProductivityWatcher" id="1Xt-HY-uBw">
+                            <menuItem title="DeskClock" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="ProductivityWatcher" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="DeskClock" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About ProductivityWatcher" id="5kV-Vb-QxS">
+                                        <menuItem title="About DeskClock" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +30,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide ProductivityWatcher" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide DeskClock" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +48,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit ProductivityWatcher" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit DeskClock" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -660,7 +661,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="ProductivityWatcher Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="DeskClock Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -674,7 +675,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ProductivityWatcher" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DeskClock" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -704,43 +705,69 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ProductivityWatcher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="DeskClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="140" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="154" height="51"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-vM-baJ">
-                                <rect key="frame" x="10" y="48" width="61" height="23"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Round #1" id="dgg-Hb-UqA">
-                                    <font key="font" size="13" name="AvenirNext-Regular"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.47389414612676056" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RPs-IH-3Of">
+                                <rect key="frame" x="6" y="7" width="82" height="24"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="11:45" id="QFr-Ua-sBs">
+                                    <font key="font" size="20" name="SFMono-Semibold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RPs-IH-3Of">
-                                <rect key="frame" x="10" y="8" width="85" height="50"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="25:00" id="QFr-Ua-sBs">
-                                    <font key="font" size="30" name="AvenirNext-Medium"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OJc-os-JLd">
+                                <rect key="frame" x="85" y="7" width="71" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="chU-QQ-Uyd"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="00:00" id="HOB-VU-wUX">
+                                    <font key="font" size="20" name="SFMono-Semibold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HpI-bX-gWf">
+                                <rect key="frame" x="6" y="30" width="75" height="12"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="NOW" id="tTs-hk-9bW">
+                                    <font key="font" size="10" name="SFMono-Regular"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.48463811528497414" green="0.48463811528497414" blue="0.48463811528497414" alpha="0.44506492077464788" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="41u-wt-TZO">
+                                <rect key="frame" x="85" y="30" width="91" height="12"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="TIMER" id="FvU-Dc-THH">
+                                    <font key="font" size="10" name="SFMono-Regular"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="CQ6-vM-baJ" secondAttribute="bottom" constant="48" id="Eae-To-6fY"/>
-                            <constraint firstItem="RPs-IH-3Of" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="12" id="aLd-5i-iwj"/>
-                            <constraint firstAttribute="bottom" secondItem="RPs-IH-3Of" secondAttribute="bottom" constant="8" id="iw6-0u-dgW"/>
-                            <constraint firstItem="CQ6-vM-baJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="12" id="shp-Dd-oKB"/>
+                            <constraint firstItem="HpI-bX-gWf" firstAttribute="baseline" secondItem="41u-wt-TZO" secondAttribute="baseline" id="2zK-cW-lQl"/>
+                            <constraint firstItem="RPs-IH-3Of" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="5sN-EL-tN3"/>
+                            <constraint firstItem="HpI-bX-gWf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="9" id="7B3-Mt-17E"/>
+                            <constraint firstAttribute="trailing" secondItem="OJc-os-JLd" secondAttribute="trailing" id="IDl-q0-dId"/>
+                            <constraint firstItem="HpI-bX-gWf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="IKF-lG-k24"/>
+                            <constraint firstItem="41u-wt-TZO" firstAttribute="leading" secondItem="OJc-os-JLd" secondAttribute="leading" id="JGB-ON-26X"/>
+                            <constraint firstItem="OJc-os-JLd" firstAttribute="leading" secondItem="HpI-bX-gWf" secondAttribute="trailing" constant="8" symbolic="YES" id="MmR-EL-TUT"/>
+                            <constraint firstItem="OJc-os-JLd" firstAttribute="leading" secondItem="RPs-IH-3Of" secondAttribute="trailing" constant="1" id="S7N-QJ-ijA"/>
+                            <constraint firstItem="RPs-IH-3Of" firstAttribute="baseline" secondItem="OJc-os-JLd" secondAttribute="baseline" id="fvJ-b3-Yg0"/>
+                            <constraint firstAttribute="trailing" secondItem="41u-wt-TZO" secondAttribute="trailing" constant="-20" id="qcI-EI-Dno"/>
+                            <constraint firstItem="HpI-bX-gWf" firstAttribute="leading" secondItem="RPs-IH-3Of" secondAttribute="leading" id="wgs-x7-2bH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelCounter" destination="RPs-IH-3Of" id="YNV-RG-Fs3"/>
-                        <outlet property="labelRound" destination="CQ6-vM-baJ" id="CYM-8B-gMd"/>
+                        <outlet property="labelCounter" destination="OJc-os-JLd" id="BIg-Yc-ysB"/>
+                        <outlet property="labelTime" destination="RPs-IH-3Of" id="N5J-8Z-Wyk"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="51" y="640"/>
+            <point key="canvasLocation" x="58" y="632.5"/>
         </scene>
     </scenes>
 </document>

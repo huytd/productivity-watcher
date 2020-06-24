@@ -11,17 +11,15 @@
 		3EDEFD3D2315E6C300F2AD2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFD3C2315E6C300F2AD2A /* ViewController.swift */; };
 		3EDEFD3F2315E6C400F2AD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEFD3E2315E6C400F2AD2A /* Assets.xcassets */; };
 		3EDEFD422315E6C400F2AD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEFD402315E6C400F2AD2A /* Main.storyboard */; };
-		3EDEFD4B2315ED0700F2AD2A /* appblocker.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEFD4A2315ED0700F2AD2A /* appblocker.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3EDEFD372315E6C300F2AD2A /* ProductivityWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductivityWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EDEFD372315E6C300F2AD2A /* DeskClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeskClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDEFD3A2315E6C300F2AD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EDEFD3C2315E6C300F2AD2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3EDEFD3E2315E6C400F2AD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EDEFD412315E6C400F2AD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EDEFD432315E6C400F2AD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EDEFD4A2315ED0700F2AD2A /* appblocker.scpt */ = {isa = PBXFileReference; lastKnownFileType = text; path = appblocker.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +36,7 @@
 		3EDEFD2E2315E6C300F2AD2A = {
 			isa = PBXGroup;
 			children = (
-				3EDEFD392315E6C300F2AD2A /* ProductivityWatcher */,
+				3EDEFD392315E6C300F2AD2A /* DeskClock */,
 				3EDEFD382315E6C300F2AD2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +44,12 @@
 		3EDEFD382315E6C300F2AD2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3EDEFD372315E6C300F2AD2A /* ProductivityWatcher.app */,
+				3EDEFD372315E6C300F2AD2A /* DeskClock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3EDEFD392315E6C300F2AD2A /* ProductivityWatcher */ = {
+		3EDEFD392315E6C300F2AD2A /* DeskClock */ = {
 			isa = PBXGroup;
 			children = (
 				3EDEFD3A2315E6C300F2AD2A /* AppDelegate.swift */,
@@ -59,17 +57,16 @@
 				3EDEFD3E2315E6C400F2AD2A /* Assets.xcassets */,
 				3EDEFD402315E6C400F2AD2A /* Main.storyboard */,
 				3EDEFD432315E6C400F2AD2A /* Info.plist */,
-				3EDEFD4A2315ED0700F2AD2A /* appblocker.scpt */,
 			);
-			path = ProductivityWatcher;
+			path = DeskClock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3EDEFD362315E6C300F2AD2A /* ProductivityWatcher */ = {
+		3EDEFD362315E6C300F2AD2A /* DeskClock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EDEFD472315E6C400F2AD2A /* Build configuration list for PBXNativeTarget "ProductivityWatcher" */;
+			buildConfigurationList = 3EDEFD472315E6C400F2AD2A /* Build configuration list for PBXNativeTarget "DeskClock" */;
 			buildPhases = (
 				3EDEFD332315E6C300F2AD2A /* Sources */,
 				3EDEFD342315E6C300F2AD2A /* Frameworks */,
@@ -79,9 +76,9 @@
 			);
 			dependencies = (
 			);
-			name = ProductivityWatcher;
+			name = DeskClock;
 			productName = ProductivityWatcher;
-			productReference = 3EDEFD372315E6C300F2AD2A /* ProductivityWatcher.app */;
+			productReference = 3EDEFD372315E6C300F2AD2A /* DeskClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3EDEFD322315E6C300F2AD2A /* Build configuration list for PBXProject "ProductivityWatcher" */;
+			buildConfigurationList = 3EDEFD322315E6C300F2AD2A /* Build configuration list for PBXProject "DeskClock" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3EDEFD362315E6C300F2AD2A /* ProductivityWatcher */,
+				3EDEFD362315E6C300F2AD2A /* DeskClock */,
 			);
 		};
 /* End PBXProject section */
@@ -129,7 +126,6 @@
 			files = (
 				3EDEFD3F2315E6C400F2AD2A /* Assets.xcassets in Resources */,
 				3EDEFD422315E6C400F2AD2A /* Main.storyboard in Resources */,
-				3EDEFD4B2315ED0700F2AD2A /* appblocker.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,12 +276,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ProductivityWatcher/Info.plist;
+				INFOPLIST_FILE = DeskClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pomoday.ProductivityWatcher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huytd.DeskClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -297,12 +293,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ProductivityWatcher/Info.plist;
+				INFOPLIST_FILE = DeskClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pomoday.ProductivityWatcher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huytd.DeskClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -311,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3EDEFD322315E6C300F2AD2A /* Build configuration list for PBXProject "ProductivityWatcher" */ = {
+		3EDEFD322315E6C300F2AD2A /* Build configuration list for PBXProject "DeskClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3EDEFD452315E6C400F2AD2A /* Debug */,
@@ -320,7 +316,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EDEFD472315E6C400F2AD2A /* Build configuration list for PBXNativeTarget "ProductivityWatcher" */ = {
+		3EDEFD472315E6C400F2AD2A /* Build configuration list for PBXNativeTarget "DeskClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3EDEFD482315E6C400F2AD2A /* Debug */,
