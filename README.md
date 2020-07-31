@@ -11,3 +11,9 @@ Prefix key: `Ctrl + Shift + Cmd`.
 Switch between Clock and Timer mode: `<Prefix> + L`
 
 Increase or decrease Timer: `<Prefix> + J / K`
+
+## Roadmap
+
+- [ ] Configurable shortcut keys
+- [ ] Dark mode UI
+- [ ] A proper app icon
