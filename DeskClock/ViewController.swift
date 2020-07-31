@@ -10,6 +10,7 @@
 
 import Cocoa
 import UserNotifications
+import HotKey
 
 extension String {
     func leftPadding(toLength: Int, withPad character: Character) -> String {
@@ -31,7 +32,41 @@ class ViewController: NSViewController {
     var currentStreak = 0
     var targetTimeCounter = 30
     var canShowNotification = false
-
+    private var startTimerHotkey: HotKey? {
+        didSet {
+            guard let hotKey = startTimerHotkey else {
+                return
+            }
+            hotKey.keyDownHandler = { [weak self] in
+                if self?.counterMode == true {
+                    self?.switchToClock()
+                } else {
+                    self?.switchToTimer()
+                }
+            }
+        }
+    }
+    private var incTimerHotkey: HotKey? {
+        didSet {
+            guard let hotKey = incTimerHotkey else {
+                return
+            }
+            hotKey.keyDownHandler = { [weak self] in
+                self?.increaseTargetTime()
+            }
+        }
+    }
+    private var decTimerHotkey: HotKey? {
+        didSet {
+            guard let hotKey = decTimerHotkey else {
+                return
+            }
+            hotKey.keyDownHandler = { [weak self] in
+                self?.decreaseTargetTime()
+            }
+        }
+    }
+    
     @IBOutlet weak var labelTime: NSTextField!
     @IBOutlet weak var labelCounter: NSTextField!
     
@@ -47,18 +82,27 @@ class ViewController: NSViewController {
         self.view.window?.backgroundColor = NSColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
     }
     
+    func increaseTargetTime() {
+        if (targetTimeCounter < 90) {
+            targetTimeCounter += 5
+        }
+        self.labelCounter.stringValue = counterToString(counter: targetTimeCounter * 60)
+    }
+    
+    func decreaseTargetTime() {
+        if (targetTimeCounter > 5) {
+            targetTimeCounter -= 5
+        }
+        self.labelCounter.stringValue = counterToString(counter: targetTimeCounter * 60)
+    }
+    
     override func scrollWheel(with event: NSEvent) {
         let isInc = event.deltaY < 0
         if (isInc) {
-            if (targetTimeCounter < 90) {
-                targetTimeCounter += 5
-            }
+            increaseTargetTime()
         } else {
-            if (targetTimeCounter > 5) {
-                targetTimeCounter -= 5
-            }
+            decreaseTargetTime()
         }
-        self.labelCounter.stringValue = counterToString(counter: targetTimeCounter * 60)
     }
     
     override func viewDidLoad() {
@@ -88,12 +132,16 @@ class ViewController: NSViewController {
         
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-            if let error = error {
+            if let _ = error {
                 print("Can't have notification!")
             }
             print("Good, we'll have notification!")
             self.canShowNotification = true
         }
+        
+        self.startTimerHotkey = HotKey(key: .l, modifiers: [.command, .shift, .control])
+        self.incTimerHotkey = HotKey(key: .k, modifiers: [.command, .shift, .control])
+        self.decTimerHotkey = HotKey(key: .j, modifiers: [.command, .shift, .control])
     }
     
     func scheduleNotification() {
@@ -127,7 +175,7 @@ class ViewController: NSViewController {
     
     func switchToTimer() {
         counterMode = true
-        counter = 5 //60 * self.targetTimeCounter
+        counter = 60 * self.targetTimeCounter
         self.labelTime.textColor = NSColor(red:0.0, green:0.0, blue:0.0, alpha:0.35)
         self.labelCounter.textColor = NSColor(red:0.0, green:0.0, blue:0.0, alpha:1.0)
     }

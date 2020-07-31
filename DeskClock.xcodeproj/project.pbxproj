@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		3EDEFD3D2315E6C300F2AD2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEFD3C2315E6C300F2AD2A /* ViewController.swift */; };
 		3EDEFD3F2315E6C400F2AD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEFD3E2315E6C400F2AD2A /* Assets.xcassets */; };
 		3EDEFD422315E6C400F2AD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEFD402315E6C400F2AD2A /* Main.storyboard */; };
+		3EE749F924A54C990075A652 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 3EE749F824A54C990075A652 /* HotKey */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE749F924A54C990075A652 /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,9 @@
 			dependencies = (
 			);
 			name = DeskClock;
+			packageProductDependencies = (
+				3EE749F824A54C990075A652 /* HotKey */,
+			);
 			productName = ProductivityWatcher;
 			productReference = 3EDEFD372315E6C300F2AD2A /* DeskClock.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +115,9 @@
 				Base,
 			);
 			mainGroup = 3EDEFD2E2315E6C300F2AD2A;
+			packageReferences = (
+				3EE749F724A54C990075A652 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = 3EDEFD382315E6C300F2AD2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,6 +334,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3EE749F724A54C990075A652 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3EE749F824A54C990075A652 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EE749F724A54C990075A652 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3EDEFD2F2315E6C300F2AD2A /* Project object */;
 }
